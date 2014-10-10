@@ -1,0 +1,31 @@
+﻿@model Weixin.Models.QRViewModel
+@{
+    ViewBag.Title = "wx";
+}
+
+<h2>Empty</h2>
+<fieldset>
+    <legend>Resource</legend>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CreateTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreateTime)
+    </div>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TotalSize)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TotalSize)
+    </div>
+    <div class="display-field">
+        @Html.DisplayNameFor(model => model.UsedSize)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UsedSize)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.QRCodeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

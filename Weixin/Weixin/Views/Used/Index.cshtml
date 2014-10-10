@@ -1,0 +1,97 @@
+﻿@model IEnumerable<Weixin.Models.QRViewModel>
+
+@{
+    ViewBag.Title = "Used";
+}
+<script type="text/javascript" src="@Href("~/Scripts/jquery.qrcode.min.js")"></script> 
+<h2>Used</h2>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>       
+            二维码
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Content)
+        </th>    
+        <th>
+            @Html.DisplayNameFor(model => model.TotalSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsedSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserPicUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resources)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+        <td>
+            <div id="@item.Id"></div> 
+            <script type="text/javascript">
+                $("#@item.Id").qrcode({
+                    width: 100, //宽度 
+                    height: 100, //高度               
+                    text: "@item.SiteUrl"
+                });
+            </script>
+        </td>
+        <td>
+            <a href="@Html.DisplayFor(modelItem => item.SiteUrl)">@Html.DisplayFor(modelItem => item.SiteUrl)</a>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Content)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalSize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsedSize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UpdateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>   
+            <img src="@Href(item.UserPicUrl)" alt="头像" />          
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.Resources)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |    
+            @Html.ActionLink("Delete", "Delete", new { id = item.QRCodeId })
+        </td>
+    </tr>
+}
+
+</table>
+
