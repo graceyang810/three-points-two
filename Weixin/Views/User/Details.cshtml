@@ -1,0 +1,29 @@
+﻿@model Weixin.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>User</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NickName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NickName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PicUrl)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PicUrl)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.UserId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Weixin.Models.QRViewModel>
+
+@{
+    ViewBag.Title = "Empty";
+}
+
+<script type="text/javascript" src="@Href("~/Scripts/jquery.qrcode.min.js")"></script> 
+
+<h2>Empty</h2>
+
+<p>
+    @using (Html.BeginForm("Create", "UnUsed", FormMethod.Post))
+    {
+        <p>空间：<input type="text" name="totalSize"/></p>
+        <p>数目：<input type="text" name="createCount" value="1"/></p>
+        <p><input type="submit" value="Create" /></p>
+    }
+    
+</p>
+<table>
+    <tr>
+        <th>序号</th>
+        <th>二维码</th>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UsedSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+        <td>
+            <div id="@item.Id"></div> 
+            <script type="text/javascript">
+                $("#@item.Id").qrcode({
+                    width: 100, //宽度 
+                    height: 100, //高度               
+                    text: "@item.SiteUrl"
+                });
+            </script>
+        </td>
+        <td>        
+            <a href="@item.SiteUrl">@Html.DisplayFor(modelItem => item.SiteUrl)</a>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalSize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UsedSize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateTime)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.QRCodeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.QRCodeId })
+        </td>
+    </tr>
+}
+
+</table>
