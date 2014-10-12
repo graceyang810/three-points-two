@@ -1,0 +1,91 @@
+body { font-family:Verdana; font-size:12pt; margin:0 auto;}
+
+.container {
+margin: 0 auto;
+width:100%;
+height:100%;}
+p{
+font-family:"楷体";
+color:white;
+}
+.confirm{
+	text-align:center;
+	white-space:nowrap;}
+.button{
+	background-color: white;
+	color:#6ada2c;
+	text-align:center;
+	font-family:"楷体";
+	}
+.title{
+background-color : #6ada2c;
+width:100%;
+height:70pt;
+text-align:center;
+overflow:hidden;
+position:relative;
+vertical-align:middle;
+}
+.title p {
+position:static;
++position:absolute;
+top:50%;
+}
+.title img{
+position:static;
++position:relative;
+top:-50%;
+left:-50%;
+}
+.bottomBar{
+	background-color : #6ada2c;
+	width:100%;
+	height:20pt;
+	text-align:center;
+	top:100%;
+	margin-top:-20pt;	
+}
+.bottomBar p{
+	font-size:13pt;
+	margin-top:-0pt;
+	}
+#verifyBox{
+position:absolute;  
+top:50%;  
+left:50%;
+background-color :#6ada2c;
+margin-left:-175pt;  
+margin-top:-70pt; 
+width:350pt;  
+height:205pt;  
+
+}
+.center{
+text-align:center;
+}
+#verifyBox .center{
+font-size:20pt;
+font-weight:bold;
+color:white;
+}
+.inputForm{
+width: 80%;
+margin-left: 10%;
+}
+#verifyBox .inputForm p{
+	text-align:center;
+	font-size:16pt;
+	color: white;
+	}
+#verifyBox .inputForm .button{
+	font-size:15pt;
+	margin:-20pt 0 0 0;
+	width:100pt;
+	height:25pt; 
+	line-height:25pt;
+	text-decoration:none;
+	cursor:pointer;
+	border:0pt;
+	}
+  .button:hover{background:#88EC88l;}
+  .button:active{background-color:#88EC88;}
