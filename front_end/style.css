@@ -16,7 +16,10 @@ color:white;
 	color:#6ada2c;
 	text-align:center;
 	font-family:"楷体";
+	border:0;
 	}
+  .button:hover{background:#88EC88l;}
+  .button:active{background-color:#88EC88;}
 .title{
 background-color : #6ada2c;
 width:100%;
@@ -37,6 +40,14 @@ position:static;
 top:-50%;
 left:-50%;
 }
+#logout{
+	position:absolute;
+	right:10%;
+	top:45%;
+	font-size:13pt;
+	width:70pt;
+	height:20pt;
+	}
 .bottomBar{
 	background-color : #6ada2c;
 	width:100%;
@@ -87,5 +98,20 @@ margin-left: 10%;
 	cursor:pointer;
 	border:0pt;
 	}
-  .button:hover{background:#88EC88l;}
-  .button:active{background-color:#88EC88;}
+#content{
+	width:80%;
+	margin-left:10%;
+	}
+#operationRegion{
+	margin-left:5%;}
+#operationRegion .button{
+	background-color:#6ada2c;
+	color:white;
+	font-size:15pt;
+	width:100pt;
+	height:25pt;
+	}
+#operationRegion .button:active{background-color:#88EC88;}
+
+hr{
+	}
