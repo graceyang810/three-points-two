@@ -1,5 +1,6 @@
-body { font-family:Verdana; font-size:12pt; margin:0 auto;}
-
+body {
+	//min-width:600pt;
+font-family:Verdana,"宋体"; font-size:12pt; margin:0 auto;}
 .container {
 margin: 0 auto;
 width:100%;
@@ -13,7 +14,7 @@ color:white;
 	white-space:nowrap;}
 .button{
 	background-color: white;
-	color:#6ada2c;
+	color:#079A2D;
 	text-align:center;
 	font-family:"楷体";
 	border:0;
@@ -21,9 +22,9 @@ color:white;
   .button:hover{background:#88EC88l;}
   .button:active{background-color:#88EC88;}
 .title{
-background-color : #6ada2c;
+background-color:#079A2D;
 width:100%;
-height:70pt;
+height:50pt;
 text-align:center;
 overflow:hidden;
 position:relative;
@@ -42,19 +43,20 @@ left:-50%;
 }
 #logout{
 	position:absolute;
-	right:10%;
+	right:15%;
 	top:45%;
 	font-size:13pt;
-	width:70pt;
+	width:50pt;
 	height:20pt;
 	}
 .bottomBar{
-	background-color : #6ada2c;
+	background-color : #079A2D;
+	position:fixed;
 	width:100%;
 	height:20pt;
 	text-align:center;
 	top:100%;
-	margin-top:-20pt;	
+	margin-top:-20pt;
 }
 .bottomBar p{
 	font-size:13pt;
@@ -64,9 +66,9 @@ left:-50%;
 position:absolute;  
 top:50%;  
 left:50%;
-background-color :#6ada2c;
+background-color :#079A2D;
 margin-left:-175pt;  
-margin-top:-70pt; 
+margin-top:-90pt; 
 width:350pt;  
 height:205pt;  
 
@@ -83,6 +85,15 @@ color:white;
 width: 80%;
 margin-left: 10%;
 }
+input{
+	border:0;
+	}
+#username{
+	width:120pt;
+	}
+#password{
+	width:120pt;
+	}
 #verifyBox .inputForm p{
 	text-align:center;
 	font-size:16pt;
@@ -101,17 +112,43 @@ margin-left: 10%;
 #content{
 	width:80%;
 	margin-left:10%;
+	margin-right:-10%;
 	}
 #operationRegion{
-	margin-left:5%;}
+	margin-left:5%;
+	margin-right:5%}
 #operationRegion .button{
-	background-color:#6ada2c;
+	background-color:#079A2D;
 	color:white;
 	font-size:15pt;
-	width:100pt;
+	width:70pt;
 	height:25pt;
 	}
-#operationRegion .button:active{background-color:#88EC88;}
-
+#operationRegion .button:active{
+	background-color:#88EC88;}
 hr{
+	width:100%;
+	}
+table{
+	width:90%;
+	margin-left:5%;
+	margin-right:5%;
+	border-top:1px solid;
+	border-left:1px solid;
+	border-color:#079A2D;	
+	}
+tr{
+	height:50pt;	
+	}
+th{
+	border-bottom:1px solid;
+	border-right:1px solid;
+	border-color:#079A2D;
+	background:#079A2D;
+	}
+td{
+	border-bottom:1px solid;
+	border-right:1px solid;
+	border-color:#079A2D;
+	text-align:center;	
 	}
