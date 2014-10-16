@@ -2,7 +2,7 @@
 
 function showQRCode(){
 	$('#qrcode').on('click', function(){
-    layer.tips('哈罗美丽的虫子！！这里放画二维码的代码~<img src="../src/Title.png"></img>', this, {
+    layer.tips('<img src="../src/Title.png"></img>', this, {
 		time: 5,
         guide: 1,
         style: ['background-color:#D1F5D7; color:#fff', '#F26C4F'],
@@ -21,6 +21,15 @@ function tPicker_e(){
 		dateFmt:'yyyy-MM-dd HH:mm:ss',
 		maxDate:'%y-%M-%d %H:%m:%s'
 		});
+	}
+var idList = {};
+function getCheckedBoxes(){
+	$("input[name='checkBox']").each(function(){
+		if($(this).prop("checked")){
+			idList.push(this.id);
+			}
+    });
+	return idList;
 	}
 
 window.onload = function ()
@@ -43,7 +52,7 @@ window.onload = function ()
 	var EditBtn = document.getElementById("edit");
 	var DeleteBtn = document.getElementById("delete");
 	var CreateBtn = document.getElementById("create");
-		
+
 	FilterBtn.onclick = function(){
 		oWin = FilterBox;
 		oBtn = FilterBtn;
@@ -52,12 +61,18 @@ window.onload = function ()
 	EditBtn.onclick = function(){
 		oWin = EditBox;
 		oBtn = EditBtn;
+		idList = [];
+		getCheckedBoxes();
 		showBox();
+		console.log(idList);
 		};
 	DeleteBtn.onclick = function(){
 		oWin = DeleteBox;
 		oBtn = DeleteBtn;
+		idList = [];
+		getCheckedBoxes();
 		showBox();
+		console.log(idList);
 		};
 	CreateBtn.onclick = function(){
 		oWin = CreateBox;
