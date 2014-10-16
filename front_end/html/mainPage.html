@@ -3,14 +3,108 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>main page</title>
 <link rel="stylesheet" href="../css/style.css" type="text/css" />
+<script src="../js/jquery-1.11.1.js"></script>
 <script src="../js/layer/layer.min.js"></script>
-<script src="../js/laydate/laydate.js"></script>
+<script src="../js/My97DatePicker/WdatePicker.js"></script>
 <script src="../js/operation.js"></script>
-<script src="../js/tableinsert.js"></script>
 </head>
 
 <body id="main">
 	<div class="container">
+        <div id="overlay"></div>
+        <div id="filterBox">
+        	<h2><span id="close">×</span></h2>
+            <div class="inputForm">
+            <br/>
+            	<p id="index">
+                <label>序号:</label>&nbsp;
+                <label>起</label>
+                <input id="index_start" type="text"/>&nbsp;
+                <label>止</label>
+                <input id="index_end" type="text"/>
+                </p>
+                <p id="user">
+                <label>用户:</label>&nbsp;
+                <input id = "user_used" type="checkbox" value="used">有</input>
+                <input id = "user_empty" type="checkbox" value="empty">无</input>
+                &nbsp;&nbsp;
+                <label>指定用户名</label>
+                <input id="username_specify" type="text"/>
+                </p>
+                <p id="space">
+                <label>空间：</label>&nbsp;
+                <label>大于</label>
+                <input id="space_start" type="text"/>&nbsp;
+                <label>MB</label>&nbsp;
+                <label>小于</label>
+                <input id="space_end" type="text"/>
+                <label>MB</label>
+                </p>
+                 <p id="createTime">
+                <label>创建时间:</label>&nbsp;
+                <input id = "time_start" class="Wdate" type="text" onFocus="tPicker_s()"/>
+                至
+                <input id = "time_end" class="Wdate" type="text" onFocus="tPicker_e()"/>
+                </p>
+                <p id="modify_Time">
+                <label>修改时间:</label>&nbsp;
+                <input id = "time_start" class="Wdate" type="text" onFocus="tPicker_s()"/>
+                至
+                <input id = "time_end" class="Wdate" type="text" onFocus="tPicker_e()"/>
+                </p>
+                <br/>
+                <div class="confirm">
+         		<button class="button2" id = "cancel_filter">取消</button>&nbsp;&nbsp;&nbsp;&nbsp;
+           		<button class="button2" id = "submit_filter">筛选</button>
+         		</div>
+            </div>
+        </div>
+        <div id="editBox">
+        	<h2><span>×</span></h2>
+            <div class="inputForm">
+            	<br/>
+                <p class="center">将所选目标空间修改为：</p>
+                <p class="center">
+                <input type="text" id="space_modified"/>MB
+                </p>
+                <br/>
+                <div class="confirm">
+         		<button class="button2" id = "cancel_edit">取消</button>&nbsp;&nbsp;&nbsp;&nbsp;
+           		<button class="button2" id = "submit_edit">修改</button>
+         		</div>
+            </div>
+        </div>
+        <div id="deleteBox">
+        	<h2><span>×</span></h2>
+             <div class="inputForm">
+            	<br/>
+                <p class="center">确认要删除选中的二维码吗？</p>
+                <br/>
+                <div class="confirm">
+         		<button class="button2" id = "cancel_delete">取消</button>&nbsp;&nbsp;&nbsp;&nbsp;
+           		<button class="button2" id = "submit_delete">删除</button>
+         		</div>
+            </div>
+        </div>
+        <div id="createBox">
+        	<h2><span>×</span></h2>
+            <div class="inputForm">
+            	<br/>
+                <p class="center">
+                <label>空间：</label>
+                <input type="text" id="create_space"/>MB
+                </p>
+                <p class="center">
+                <label>数量：</label>
+                <input type="text" id="create_number"/>个
+                </p>
+                <br/>
+                <div class="confirm">
+         		<button class="button2" id = "cancel_create">取消</button>&nbsp;&nbsp;&nbsp;&nbsp;
+           		<button class="button2" id = "submit_create">创建</button>
+         		</div>
+            </div>
+        </div>
 		<div class="title">
             <p><img src="../src/Title.png" style="vertical-align:middle;" /></p>
             <button id = "logout" class="button">注销</button>
@@ -18,32 +112,36 @@
         <br/>
         <div id="content">   
             <div id="operationRegion">
-               <button id = "filter" class="button">筛选</button>&nbsp;
-               <button id = "edit" class="button">修改</button>&nbsp;
-               <button id = "delete" class="button">删除</button>&nbsp;
-               <button id = "create" class="button">创建</button>&nbsp;
+               <button id = "filter" class="button2">筛选</button>&nbsp;
+               <button id = "edit" class="button2">修改</button>&nbsp;
+               <button id = "delete" class="button2">删除</button>&nbsp;
+               <button id = "create" class="button2">创建</button>&nbsp;
+               <button id = "print" class="button2">打印</button>&nbsp;
             </div>
         	<hr size="3pt" color ="black" />
             <table border="0" cellpadding="0" cellspacing="0">
             	<tr>
                 	<th width="5%"><input type="checkbox" value="all"/></th>
-                    <th width="5%">序号</th>
-                    <th width="20%">二维码</th>
-                    <th width="20%">空间</th>
-                    <th width="25%">时间</th>
-                    <th width="25%">用户</th>
+                    <th width="5%">序号</th>                    
+                    <th width="15%">空间</th>
+                    <th width="20%">创建时间</th>
+                    <th width="20%">修改时间</th>
+                    <th width="20%">用户</th>
+                    <th width="20%">操作</th>
                 </tr>
                 <tr>
                 	<td><input type="checkbox" value = "id"/></td>
-                    <td width="5%">1</td>
-                    <td width="20%">二维码</td>
-                    <td width="20%">1/5MB</td>
-                    <td width="25%">2014-10-14</td>
-                    <td width="25%">haha</td>
-                </tr>
-
+                    <td width="5%">1</td>      
+                    <td width="15%">1/5MB</td>
+                    <td width="20%">2014-10-14</td>
+                    <td width="20%">2014-10-14</td>
+                    <td width="20%">haha</td>
+                    <td width="20%">
+                    <button id="detail" class="button2">详情</button>&nbsp;
+                    <button id="qrcode" class="button2" onClick="showQRCode()">二维码</button>
+                    </td>
+                </tr>                
             </table>
-            <button id="testBtn">insert new item</button>
             <br/>
             <br/>
          </div>    

@@ -1,14 +1,18 @@
 body {
-	//min-width:600pt;
+	min-width:600pt;
 font-family:Verdana,"宋体"; font-size:12pt; margin:0 auto;}
 .container {
 margin: 0 auto;
 width:100%;
 height:100%;}
-p{
-font-family:"楷体";
-color:white;
-}
+#overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:#000;opacity:0.5;filter:alpha(opacity=50);display:none;}
+#filterBox{position:absolute;top:50%;left:50%;width:460pt;height:250pt;background:#fff;border:1px solid #079A2D;margin:-125pt 0 0 -230pt;display:none;}
+#editBox{position:absolute;top:50%;left:50%;width:380px;height:210px;background:#fff;border:1px solid #079A2D;margin:-105px 0 0 -190px;display:none;}
+#deleteBox{position:absolute;top:50%;left:50%;width:350px;height:170px;background:#fff;border:1px solid #079A2D;margin:-85px 0 0 -175px;display:none;}
+#createBox{position:absolute;top:50%;left:50%;width:350px;height:210px;background:#fff;border:1px solid #079A2D;margin:-105px 0 0 -175px;display:none;}
+h2{font-size:12px;height:12px;text-align:right;background:#079A2D;border-bottom:1px solid #079A2D;padding:5px;cursor:move;margin-top:-4px}
+h2 span{color:#079A2D;cursor:pointer;background:#fff;border:1px solid #079A2D;padding:0 2px;}
+
 .confirm{
 	text-align:center;
 	white-space:nowrap;}
@@ -18,9 +22,20 @@ color:white;
 	text-align:center;
 	font-family:"楷体";
 	border:0;
+	cursor:pointer;
 	}
   .button:hover{background:#88EC88l;}
   .button:active{background-color:#88EC88;}
+.button2{
+	background-color:#079A2D;
+	color: white;
+	text-align:center;
+	font-family:"楷体";
+	border:0;
+	cursor:pointer;	
+	}
+	.button2:hover{background:#88EC88l;}
+  .button2:active{background-color:#88EC88;}
 .title{
 background-color:#079A2D;
 width:100%;
@@ -50,6 +65,8 @@ left:-50%;
 	height:20pt;
 	}
 .bottomBar{
+	color:white;
+	font-family:"楷体";
 	background-color : #079A2D;
 	position:fixed;
 	width:100%;
@@ -70,8 +87,8 @@ background-color :#079A2D;
 margin-left:-175pt;  
 margin-top:-90pt; 
 width:350pt;  
-height:205pt;  
-
+height:205pt;
+font-family:"楷体"；
 }
 .center{
 text-align:center;
@@ -88,6 +105,9 @@ margin-left: 10%;
 input{
 	border:0;
 	}
+p input{
+	border:1px solid;
+	border-color:#079A2D;}
 #username{
 	width:120pt;
 	}
@@ -117,15 +137,11 @@ input{
 #operationRegion{
 	margin-left:5%;
 	margin-right:5%}
-#operationRegion .button{
-	background-color:#079A2D;
-	color:white;
+#operationRegion .button2{
 	font-size:15pt;
 	width:70pt;
 	height:25pt;
 	}
-#operationRegion .button:active{
-	background-color:#88EC88;}
 hr{
 	width:100%;
 	}
@@ -141,6 +157,7 @@ tr{
 	height:50pt;	
 	}
 th{
+	color:#D1F5D7;
 	border-bottom:1px solid;
 	border-right:1px solid;
 	border-color:#079A2D;
@@ -152,3 +169,51 @@ td{
 	border-color:#079A2D;
 	text-align:center;	
 	}
+td .button2{
+	font-family:"宋体";
+	text-align:center;
+	border:0;
+	font-size:11pt;
+	width:50pt;
+	height:20pt;
+	cursor:pointer;
+	}
+	
+#index input{
+	width:30pt;}	
+#user input:checkbox{
+	border:0;}
+#space input{
+	width:30pt;
+	}
+#filterBox .button2,#editBox .button2,#deleteBox .button2,#createBox .button2{
+	font-size:15pt;
+	margin:-20pt 0 0 0;
+	width:100pt;
+	height:25pt; 
+	line-height:25pt;
+	text-decoration:none;
+	cursor:pointer;
+	border:0pt;
+	}
+#createBox input{
+	width:30pt;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
