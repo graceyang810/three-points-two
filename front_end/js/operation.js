@@ -22,7 +22,7 @@ function tPicker_e(){
 		maxDate:'%y-%M-%d %H:%m:%s'
 		});
 	}
-var idList = {};
+var idList = {};//复选框选中的id列表
 function getCheckedBoxes(){
 	$("input[name='checkBox']").each(function(){
 		if($(this).prop("checked")){
@@ -31,6 +31,17 @@ function getCheckedBoxes(){
     });
 	return idList;
 	}
+function checkAllBoxes(){
+	if($("#checkBoxAll").prop("checked")){
+		$("input[name='checkBox']").each(function() {
+            $(this).prop("checked",true);
+        });
+	}else{
+		$("input[name='checkBox']").each(function() {
+            $(this).prop("checked",false);
+        });
+	}
+}
 
 window.onload = function ()
 {
