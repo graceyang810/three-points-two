@@ -42,7 +42,21 @@ function checkAllBoxes(){
         });
 	}
 }
-
+function userUsed_filter(){
+	
+	if($("#user_used").prop("checked")){
+		$("#username_specify_show").css('display','inline');
+		$("#username_specify").css('display','inline');
+		$("#modify_Time").css('display','block');
+		$('#filterBox').css('height','280pt');
+	}else{
+		$("#username_specify_show").css('display','none');
+		$("#username_specify").css('display','none');
+		$("#modify_Time").css('display','none');
+		$('#filterBox').css('height','240pt');
+	}
+	}
+	
 window.onload = function ()
 {
 	var oLay = document.getElementById("overlay");

@@ -23,16 +23,17 @@
                 <label>止</label>
                 <input id="index_end" type="text"/>
                 </p>
-                <p id="user">
-                <label>用户:</label>&nbsp;
-                <input id = "user_used" type="checkbox" value="used">有</input>
-                <input id = "user_empty" type="checkbox" value="empty">无</input>
-                &nbsp;&nbsp;
-                <label>指定用户名</label>
-                <input id="username_specify" type="text"/>
+                <p id="space_all">
+                <label>总空间：</label>&nbsp;
+                <label>大于</label>
+                <input id="space_start" type="text"/>&nbsp;
+                <label>MB</label>&nbsp;
+                <label>小于</label>
+                <input id="space_end" type="text"/>
+                <label>MB</label>
                 </p>
-                <p id="space">
-                <label>空间：</label>&nbsp;
+                <p id="space_left">
+                <label>可用空间：</label>&nbsp;
                 <label>大于</label>
                 <input id="space_start" type="text"/>&nbsp;
                 <label>MB</label>&nbsp;
@@ -45,6 +46,14 @@
                 <input id = "time_start" class="Wdate" type="text" onFocus="tPicker_s()"/>
                 至
                 <input id = "time_end" class="Wdate" type="text" onFocus="tPicker_e()"/>
+                </p>
+                <p id="user">
+                <label>用户:</label>&nbsp;
+                <input id = "user_used" type="checkbox" value="used" onClick="userUsed_filter()">有</input>
+                <input id = "user_empty" type="checkbox" value="empty">无</input>
+                &nbsp;&nbsp;
+                <label id="username_specify_show">指定用户名</label>
+                <input id="username_specify" type="text"/>
                 </p>
                 <p id="modify_Time">
                 <label>修改时间:</label>&nbsp;
@@ -137,22 +146,10 @@
                     <td width="20%">2014-10-14</td>
                     <td width="20%">haha</td>
                     <td width="20%">
-                    <button id="detail" class="button2">详情</button>&nbsp;
+                    <button id="detail" class="button2">详情</button>
                     <button id="qrcode" class="button2" onClick="showQRCode()">二维码</button>
                     </td>
-                </tr>
-                <tr>
-                	<td><input type="checkbox" id = "2" value = "id" name="checkBox"/></td>
-                    <td width="5%" >2</td>      
-                    <td width="15%">1/5MB</td>
-                    <td width="20%">2014-10-14</td>
-                    <td width="20%">2014-10-14</td>
-                    <td width="20%">haha</td>
-                    <td width="20%">
-                    <button id="detail" class="button2">详情</button>&nbsp;
-                    <button id="qrcode" class="button2" onClick="showQRCode()">二维码</button>
-                    </td>
-                </tr>                    
+                </tr>             
             </table>
             <br/>
             <br/>
