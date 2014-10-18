@@ -1,7 +1,17 @@
 // JavaScript Document
+ jQuery(function($) {
+        $(".swipebox").swipebox();
+    });
+
+function playVedio(){
+	var i = $(this).attr("name");
+	console.warn(i);
+	}
+
 $(document).ready(function () {
+//	C.K("../Resources/vedio/test.mp4&p=0&v=85","myvideo");
  // jQuery("#nanoGallery").nanoGallery();
- jQuery("#nanoGallery").nanoGallery({thumbnailWidth:70,thumbnailHeight:70,
+/* jQuery("#nanoGallery").nanoGallery({thumbnailWidth:70,thumbnailHeight:70,
         items: [
             {
                 src: '../Resources/img/img1.jpg',        // 图片网址
@@ -21,4 +31,6 @@ $(document).ready(function () {
             }
         ]
     });
+*/
+
 });

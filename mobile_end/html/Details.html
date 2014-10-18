@@ -3,12 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css"/>
 <link rel="stylesheet" href="../css/style_mobile.css"/>
-<link rel="stylesheet" href="../css/nanogallery.css"/>
-<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+
+<script src="../plugin/swipebox/lib/jquery-2.0.3.min.js"></script>
+<script src="../plugin/ckplayer/ck.js"></script>
+<link rel="stylesheet" href="../plugin/swipebox/swipebox.css"/>
+<script src="../plugin/swipebox/lib/ios-orientationchange-fix.js"></script>
+<script src="../plugin/swipebox/lib/jquery.isotope.min.js"></script>
+<script src="../plugin/swipebox/jquery.swipebox.js"></script>
 <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-<script  type="text/javascript" src="../js/jquery.nanogallery.min.js"></script>
 <script  type="text/javascript" src="../js/details.js"></script>
 </head>
 <body>
@@ -27,12 +31,35 @@
         </div>
         <div id="content_qrCode">
         	<p id="text">hello!</p>
-            <div id="nanoGallery">
-   <!--         <a href="../Resources/img/img1.jpg" data-ngthumb="../Resources/img/img1.jpg"></a>
-            <a href="../Resources/img/img2.jpg" data-ngthumb="../Resources/img/img2.jpg"></a> -->
-			</div> 
+            <div id="picGallery">
+          		<a name="1" rel="gallery" href="../Resources/img/img1.jpg" class="swipebox">
+                    <img src="../Resources/img/img1.jpg" alt="image">
+                </a>
+                <a name="2" rel="gallery" href="../Resources/img/img2.jpg" class="swipebox">
+                    <img src="../Resources/img/img2.jpg" alt="image">
+                </a>
+                <a name="3" rel="gallery" href="../Resources/img/img2.jpg" class="swipebox">
+                    <img src="../Resources/img/img2.jpg" alt="image">
+                </a>
+                <a name="4" rel="gallery" href="../Resources/img/img2.jpg" class="swipebox">
+                    <img src="../Resources/img/img2.jpg" alt="image">
+                </a>
+            </div>
+          
             <div id="vedioGallery">
-            
+            	<div id="myvedio"></div>
+                <a name="1" class="vediobox" href="#" onClick="playVedio()">
+                    <img src="../Resources/img/img2.jpg">
+                </a> 
+                <a name="2" class="vediobox" href="#" onClick="playVedio()">
+                    <img src="../Resources/img/img1.jpg">
+                </a>
+                <a name="3" class="vediobox" href="#" onClick="playVedio()">
+                    <img src="../Resources/img/img1.jpg">
+                </a> 
+                <a name="4" class="vediobox" href="#" onClick="playVedio()">
+                    <img src="../Resources/img/img1.jpg">
+                </a>              
             </div>     
         </div>
     </div>

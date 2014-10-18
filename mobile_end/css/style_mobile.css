@@ -1,6 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
-
+body{
+	font-family:"微软雅黑", "黑体", Verdana, Arial;}
 .container{
 	margin: 0 auto;
 	width:90%;
@@ -18,3 +19,54 @@
 	color:#3F719A;
 	font-size:1.5em;
 	}
+#text{
+	font-size:1.2em;
+	}
+#picGallery{
+	margin:0;
+	padding:0;
+	}
+.swipebox,.vediobox{
+	list-style-type:none;
+	margin-bottom:1em;
+	width:33%;
+	}
+.vediobox:active{
+	opacity:0.5;
+	}
+.swipebox img,.vediobox img{
+	display: inline;
+	margin-bottom:0.5em;
+	margin-right:1%;
+	width:31%;
+	vertical-align:top;
+	}
+#myvedio{
+	display:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
