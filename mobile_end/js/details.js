@@ -3,9 +3,7 @@
         $(".swipebox").swipebox();
     });
 
-function playVedio(){
-	var i = $(this).attr("name");
-	console.warn(i);
+function playVideo(){
 	}
 
 $(document).ready(function () {

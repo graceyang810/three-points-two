@@ -26,15 +26,12 @@ body{
 	margin:0;
 	padding:0;
 	}
-.swipebox,.vediobox{
+.swipebox{
 	list-style-type:none;
 	margin-bottom:1em;
 	width:33%;
 	}
-.vediobox:active{
-	opacity:0.5;
-	}
-.swipebox img,.vediobox img{
+.swipebox img{
 	display: inline;
 	margin-bottom:0.5em;
 	margin-right:1%;
@@ -43,7 +40,18 @@ body{
 	}
 #myvedio{
 	display:none;}
-
+.videobox{
+	list-style-type:none;
+	margin-bottom:1em;
+	width:100%;
+	text-decoration:none;
+	}
+.videobox:active{
+	opacity:0.5;
+	}
+.videobox img{
+	width:100%;
+	}
 
 
 

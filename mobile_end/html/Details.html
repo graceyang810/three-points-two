@@ -17,10 +17,10 @@
 </head>
 <body>
 
-<div data-role="page">
+<div data-role="page" id="page1">
   <div data-role="header">
     <h1>详情</h1>
-    <button class ="ui-btn-right" data-icon="delete" data-iconpos="notext" ></button>
+    <button class ="ui-btn-right" data-icon="delete" data-iconpos="notext"></button>
   </div>
 
   <div data-role="content">
@@ -45,21 +45,15 @@
                     <img src="../Resources/img/img2.jpg" alt="image">
                 </a>
             </div>
-          
-            <div id="vedioGallery">
-            	<div id="myvedio"></div>
-                <a name="1" class="vediobox" href="#" onClick="playVedio()">
-                    <img src="../Resources/img/img2.jpg">
+            <div id="audioGallery">
+            	<button data-icon="star" data-iconpos="left">播放录音</button>
+                <audio src="#">您的浏览器不支持 audio 标签。</audio>
+            </div>
+            <div id="videoGallery">
+            	<div id="myvideo"></div>                
+                <a class="videobox" href="#page2" onClick="playVideo()">
+                   <button data-icon="star" data-iconpos="left">播放视频</button>
                 </a> 
-                <a name="2" class="vediobox" href="#" onClick="playVedio()">
-                    <img src="../Resources/img/img1.jpg">
-                </a>
-                <a name="3" class="vediobox" href="#" onClick="playVedio()">
-                    <img src="../Resources/img/img1.jpg">
-                </a> 
-                <a name="4" class="vediobox" href="#" onClick="playVedio()">
-                    <img src="../Resources/img/img1.jpg">
-                </a>              
             </div>     
         </div>
     </div>
@@ -67,5 +61,13 @@
 
 </div> 
 
+<div data-role="page" id="page2">
+	<div data-role="content">
+    	<video controls width="100%">
+          <source src="../Resources/video/test.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
 </body>
 </html>
