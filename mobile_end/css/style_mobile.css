@@ -11,6 +11,10 @@ body{
 	margin-top:5%;
 	margin-bottom:5%;
 	}
+a {
+	text-align:center;
+	text-decoration:none;
+	}
 #userIcon{
 	width:10%;
 	}
@@ -52,7 +56,20 @@ body{
 .videobox img{
 	width:100%;
 	}
-
+.option{
+	font-size:1.5em;}
+.notes{
+	font-size:0.8em;
+	font-weight:lighter;}
+.button{
+	font-family:"微软雅黑", "黑体", Verdana, Arial;
+	text-align:center;
+	border:1px solid;
+	border-color:#999;
+	margin:0.5em;
+	background-color:#BEFFB5;
+	text-shadow:none;
+	}
 
 
 
