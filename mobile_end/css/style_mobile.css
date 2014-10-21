@@ -11,6 +11,8 @@ body{
 	margin-top:5%;
 	margin-bottom:5%;
 	}
+.tip{
+	text-align:center;}
 #userIcon{
 	width:10%;
 	}
@@ -22,13 +24,16 @@ body{
 #text{
 	font-size:1.2em;
 	}
-#picGallery{
-	margin:0;
-	padding:0;
+#message,#picGallery,#audioGallery,#videoGallery{
+	width:100%;
+	margin-bottom:0.5em;
+	padding:0.3em;
+	border:1px solid;
+	border-color:#DBDBDB;
 	}
 .swipebox{
 	list-style-type:none;
-	margin-bottom:1em;
+	margin-bottom:0.5em;
 	width:33%;
 	}
 .swipebox img{
@@ -38,8 +43,6 @@ body{
 	width:31%;
 	vertical-align:top;
 	}
-#myvedio{
-	display:none;}
 .videobox{
 	list-style-type:none;
 	margin-bottom:1em;
@@ -52,7 +55,14 @@ body{
 .videobox img{
 	width:100%;
 	}
-
+audio,video{
+	width:100%;
+	}
+#submit_detail{
+	text-align:center
+	}
+#submit_detail a{
+	}
 
 
 
