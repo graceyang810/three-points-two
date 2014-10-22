@@ -82,7 +82,10 @@ audio,video{
 #question_btn{
 	cursor:none;
 	}
-
+.selector{
+	overflow:hidden;
+	opacity:0;
+	position:absolute;}
 
 
 
