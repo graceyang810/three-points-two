@@ -76,16 +76,23 @@ audio,video{
 	border:1px solid;
 	border-color:#999;
 	margin:0.5em;
-	background-color:#BEFFB5;
+	background-color:#EEE;
 	text-shadow:none;
 	}
 #question_btn{
 	cursor:none;
 	}
 .selector{
+	margin-top:-50%;
+	border:0;
 	overflow:hidden;
+	display:none;
 	opacity:0;
-	position:absolute;}
+	position:absolute;
+	width:480px;
+	height:100px;
+	filter:alpha(opacity:0);
+	}
 
 
 

@@ -20,21 +20,24 @@
     </div>
     <div data-role="content">
     <div class="container">
-    	<div id="addPhoto" class="button" onClick="">
-        	<p class="option">添加图片</p>
+    	<button id="addPhoto" class="button">
+        	<input name="fileSelect[]" class="selector" type="file" accept="image/*">
+            <p class="option">添加图片</p>
             <p class="notes">最多可添加6张</p>
-            <input class="selector" type="file" accept="image/*"/>      	
-        </div>
-        <div id="addAudio" class="button" >
-       	  <p class="option">添加音频</p>
+            </input>      	
+        </button>
+        <button id="addAudio" class="button" >
+        	<input class="selector" type="file" accept="audio/*"> 
+       	  	<p class="option">添加音频</p>
             <p class="notes">最多可录制120秒</p>
-            <input class="selector" type="file" accept="audio/*"/>   
-        </div>
-        <div id="addVideo" class="button" >
-       		<p class="option">添加视频</p>
+            </input>              
+        </button>
+        <button id="addVideo" class="button" >
+       		<input class="selector" type="file" accept="video/*">
+            <p class="option">添加视频</p>
             <p class="notes">最多可录制20秒</p>
-            <input class="selector" type="file" accept="video/*"/>   
-        </div>
+            </input>   
+        </button>
     </div>
     </div>
 </div>
