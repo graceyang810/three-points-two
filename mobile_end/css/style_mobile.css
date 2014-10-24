@@ -93,6 +93,14 @@ audio,video{
 	height:100px;
 	filter:alpha(opacity:0);
 	}
+div.ui-slider-switch{
+	float:right;
+	}
+
+textarea.ui-input-text
+{min-height:90px;}
+
+
 
 
 
