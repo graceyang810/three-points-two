@@ -22,14 +22,14 @@
     <div class="container">
     	<fieldset data-role="fieldcontain">
             <label for="questionList">问题</label>
-            <select name="questionList" id="questionList">
+            <select name="questionList" id="questionList" onChange="qCustomShow()">
               <option value="q1">我的手机号码是多少？</option>
               <option value="q2">我的全名是？</option>
               <option value="q3">我的生日是几月几日？</option>
               <option value="custom">自定义问题</option>
             </select>
             <br/>
-            <div>
+            <div id="qCustom_parent">
             <input id="qCustom" type="text"></input>
             </div>
          </fieldset>
