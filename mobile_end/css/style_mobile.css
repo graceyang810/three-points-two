@@ -92,6 +92,16 @@ audio,video{
 	height:90px;
 	filter:alpha(opacity:0);
 	}
+.selector_pic{
+	border:0;
+	overflow:hidden;
+	display:none;
+	opacity:0;
+	position:absolute;
+	width:90px;
+	height:90px;
+	filter:alpha(opacity:0);
+	}
 div.ui-slider-switch{
 	float:right;
 	}
@@ -102,7 +112,22 @@ textarea.ui-input-text
 #qCustom_parent{
 	display:none;}
 
-
+#addPic img{
+	display: inline;
+	margin-bottom:0.5em;
+	margin-right:1%;
+	width:31%;
+	vertical-align:top;
+	}
+#addPic_btn{
+	background-image:url(../Resources/img/addPic.png);
+	background-repeat:no-repeat;
+	display: inline;
+	margin-bottom:0.5em;
+	margin-right:1%;
+	width:31%;
+	vertical-align:top;
+	}
 
 
 
