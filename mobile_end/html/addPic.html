@@ -11,7 +11,7 @@
 <script  type="text/javascript" src="../js/setMsg.js"></script>
 </head>
 
-<body>
+<body onLoad="square()">
 <div data-role="page">
 	<div data-role="header">
         <h1>添加图片</h1>
@@ -24,7 +24,7 @@
         <img src="../Resources/img/img2.jpg"></img>
         <img src="../Resources/img/img2.jpg"></img>
         <span id="addPic_btn">
-        	<input data-role="none" class="selector_pic" type="file" accept="image/*"/>
+        	<input data-role="none" id="selector_pic" type="file" accept="image/*"/>
         </span>
         </div>
     </div>

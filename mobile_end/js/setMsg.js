@@ -17,3 +17,7 @@ function qCustomShow(){
 		$("#qCustom_parent").css("display","none");
 		}
 	}
+function square(){
+	$("#addPic_btn").css("height",$("#addPic_btn").css("width"));
+	$("#selector_pic").css("height",$("#selector_pic").css("width"));
+}
