@@ -204,9 +204,23 @@ td .button2{
 #createBox input{
 	width:30pt;
 	}
-	
-	
-	
+.qrcode_print{
+	display:inline-block;
+	width:24%;
+	text-align:center;
+	margin-bottom:15px;
+	}
+.qrcode_print img{
+	width:180px;
+	height:180px;
+	}
+.qrcode_print p{
+	display:inline;
+	}
+#print_op{
+	text-align:center;
+	margin-bottom:20px;
+	}
 	
 	
 	

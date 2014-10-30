@@ -56,7 +56,10 @@ function userUsed_filter(){
 		$('#filterBox').css('height','240pt');
 	}
 	}
-	
+
+function printPage(){
+	$("#print_content").jqprint();
+	}
 window.onload = function ()
 {
 	var oLay = document.getElementById("overlay");
