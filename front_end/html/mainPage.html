@@ -4,6 +4,7 @@
 <title>main page</title>
 <link rel="stylesheet" href="../css/style.css" type="text/css" />
 <script src="../js/jquery-1.11.1.js"></script>
+<script src="../js/jquery.qrcode.min.js"></script>
 <script src="../js/layer/layer.min.js"></script>
 <script src="../js/My97DatePicker/WdatePicker.js"></script>
 <script src="../js/operation.js"></script>
@@ -114,6 +115,11 @@
          		</div>
             </div>
         </div>
+        <div id="qrcodeBox">
+            <h2><span>×</span></h2>
+            <div id="qrcode"></div>
+   <!--         <span id="site"></span>  -->
+        </div>
 		<div class="title">
             <p><img src="../src/Title.png" style="vertical-align:middle;" /></p>
             <button id = "logout" class="button">注销</button>
@@ -147,11 +153,35 @@
                     <td width="20%">haha</td>
                     <td width="20%">
                     <button id="detail" class="button2">详情</button>
-                    <button id="qrcode" class="button2" onClick="showQRCode()">二维码</button>
+                    <button id="qrcode_1" name="qrcode" class="button2">二维码</button>
+                    <script>
+                                var oLay = document.getElementById("overlay");
+                                var QrcodeBox = document.getElementById("qrcodeBox");
+                                var QrcodeBtn = document.getElementById("qrcode_1");
+                                var QrcodeClose = document.getElementsByTagName("span")[4];
+                                QrcodeBtn.onclick = function () {
+                                    oWin = QrcodeBox;
+                                    oBtn = QrcodeBtn;
+                                    oLay.style.display = "block";
+                                    oWin.style.display = "block"
+               //                     site.innerHTML = 'http://www.baidu.com/';
+                                    qrcode.innerHTML = "";
+                                    jQuery('#qrcode').qrcode({
+                                        height: 200,
+                                        width: 200,
+                                        text: 'http://www.baidu.com/'
+                                    });
+                                };   
+                                QrcodeClose.onclick = function () {
+                                    oLay.style.display = "none";
+                                    oWin.style.display = "none"
+                                };
+                            </script>
                     </td>
                 </tr>             
             </table>
             <br/>
+              
             <br/>
          </div>    
       </div>
