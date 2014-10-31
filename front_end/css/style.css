@@ -208,13 +208,13 @@ td .button2{
 	}
 .qrcode_print{
 	display:inline-block;
-	width:24%;
+	width:190;
 	text-align:center;
 	margin-bottom:15px;
 	}
 .qrcode_print img{
-	width:180px;
-	height:180px;
+	width:180;
+	height:180;
 	}
 .qrcode_print p{
 	display:inline;

@@ -60,6 +60,8 @@ function userUsed_filter(){
 function printPage(){
 	$("#print_content").jqprint();
 	}
+
+	
 window.onload = function ()
 {
 	var oLay = document.getElementById("overlay");
