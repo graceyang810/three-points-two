@@ -58,10 +58,15 @@ function userUsed_filter(){
 	}
 
 function printPage(){
-	$("#print_content").jqprint();
+//	$("#print_content").jqprint();
+//	var bodyHTML=window.document.body.innerHTML;
+//	window.document.body.innerHTML=$("#print_content").html();  
+	$("#print_op").hide();
+	window.print();  
+	$("#print_op").show();
+//	window.document.body.innerHTML=bodyHTML; 
 	}
 
-	
 window.onload = function ()
 {
 	var oLay = document.getElementById("overlay");

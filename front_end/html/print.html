@@ -14,21 +14,22 @@
 
 <body>
 <div id="print_op">
-	<button onClick="printPage()">打印</button>
+	<button onClick="printPage()">打印</button>&nbsp;&nbsp;
     <label>大小</label>
-    <input type="range" min="100" max="300" step="10" value="180" onChange="resizeQRcode()"></input>
+    <input id="qrcode_size" type="range" min="50" max="400" step="10" value="180" onChange="resizeQRcode()"></input>
+    <label id="qrcode_size_num" style="width:30px">180</label>
 </div>
 <div class="container" id="print_content">
-	<div class = "qrcode_print">
+	<div class = "qrcode_print" id="print1">
     	<div id="qrcode1"></div>
         <script>
 		var qrcode_size=180;
 		var qrcode_print_size=190;
 		function resizeQRcode(){
-			qrcode_size = $(this).val();
-			alert("!");
-			qrcode_print_size = qrcode_size+10;
-			$(".qrcode_print")[0].css("width",qrcode_print_size);
+			qrcode_size = $("#qrcode_size").val();
+			qrcode_size_num.innerHTML = qrcode_size;
+			qrcode_print_size = parseInt(qrcode_size)+10;
+			$("#print1").css("width",qrcode_print_size);
 			qrcode1.innerHTML = "";
 			jQuery('#qrcode1').qrcode({
 				height: qrcode_size,
@@ -36,6 +37,7 @@
 				text: 'http://www.baidu.com/'
 			});
 			}
+		qrcode1.innerHTML = "";
 		jQuery('#qrcode1').qrcode({
 			height: qrcode_size,
 			width: qrcode_size,
@@ -62,4 +64,5 @@
     </div>
 </div>
 </body>
+
 </html>
